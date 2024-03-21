@@ -24,11 +24,15 @@ src/                                        // Directorio principal del código 
 |   |-- templates/                          // Plantillas que definen la estructura básica de una página
 |   |   |-- DefaultLayout.vue
 |   |   |-- ...
-|-- commons/                                // Código compartido utilizado en todo el proyecto
+|-- shared/                                 // Código compartido utilizado en todo el proyecto
 |   |-- api/                                // Archivos relacionados con la comunicación con servicios externos
 |   |   |-- taskService.js
+|   |   |-- ...
 |   |-- helpers/                            // Funciones y utilidades de ayuda
 |   |   |-- dateUtils.js
+|   |   |-- ...
+|   |-- interfaces/                         // Interfaces o contratos para diversas partes del sistema
+|   |   |-- task.interface.js
 |   |   |-- ...
 |   |-- plugins/                            // Configuración de plugins utilizados en el proyecto
 |   |   |-- axios.js
@@ -39,23 +43,21 @@ src/                                        // Directorio principal del código 
 |   |   |-- ...
 |   |-- data/                               // Datos de prueba o mocks utilizados durante el desarrollo
 |   |   |-- taskMocks.js
+|   |   |-- ...
 |   |-- use_cases/                          // Implementaciones de casos de uso de la aplicación
 |   |   |-- AddTaskUseCase.js
 |   |   |-- DeleteTaskUseCase.js
 |   |   |-- ...
-|-- interfaces/                             // Interfaces o contratos para diversas partes del sistema
-|   |-- task.interface.js
 |-- router/                                 // Configuración del enrutador de Vue Router
 |   |-- index.js
-|   |-- routes.js
 |-- stores/                                 // Configuración de Pinia, el sistema de gestión de estado de Vue
 |   |-- index.js
 |   |-- modules/                            // Módulos Pinia organizados por funcionalidad
 |   |   |-- task.js
 |   |   |-- user.js
 |   |   |-- ...
-|-- views/                                  // Vistas de la aplicación organizadas por páginas o secciones
-|   |-- Home/                               // Vista principal de la página de inicio
+|-- modules/                                // Módulos de la aplicación organizados por funcionalidades
+|   |-- TaskManager/                        // Módulo principal del gestor de tareas
 |   |   |-- assets/
 |   |   |   |-- images/
 |   |   |   |-- styles/
@@ -70,53 +72,31 @@ src/                                        // Directorio principal del código 
 |   |   |   |   |-- tasks.js
 |   |   |   |   |-- ...
 |   |   |-- interfaces/
-|   |   |   |-- home.interface.js
+|   |   |   |-- taskManager.interface.js
 |   |   |   |-- ...
 |   |   |-- router/
-|   |   |   |-- home.routes.js
+|   |   |   |-- taskManager.routes.js
 |   |   |   |-- ...
-|   |   |-- Home.vue
-|   |-- Login/                              // Vista para el inicio de sesión
+|   |   |-- TaskManager.vue
+|   |-- Reminders/                          // Módulo de recordatorios
 |   |   |-- assets/
-|   |   |   |-- images/
-|   |   |   |-- styles/
 |   |   |   |-- ...
 |   |   |-- components/
-|   |   |   |-- LoginForm.vue
+|   |   |   |-- ReminderList.vue
+|   |   |   |-- ReminderForm.vue
 |   |   |   |-- ...
 |   |   |-- stores/
 |   |   |   |-- index.js
 |   |   |   |-- modules/
-|   |   |   |   |-- auth.js
+|   |   |   |   |-- reminders.js
 |   |   |   |   |-- ...
 |   |   |-- interfaces/
-|   |   |   |-- login.interface.js
+|   |   |   |-- reminder.interface.js
 |   |   |   |-- ...
 |   |   |-- router/
-|   |   |   |-- login.routes.js
+|   |   |   |-- reminders.routes.js
 |   |   |   |-- ...
-|   |   |-- Login.vue
-|   |-- TaskDetails/                        // Vista para ver los detalles de una tarea
-|   |   |-- assets/
-|   |   |   |-- images/
-|   |   |   |-- styles/
-|   |   |   |-- ...
-|   |   |-- components/
-|   |   |   |-- TaskDetailHeader.vue
-|   |   |   |-- TaskDetailContent.vue
-|   |   |   |-- ...
-|   |   |-- stores/
-|   |   |   |-- index.js
-|   |   |   |-- modules/
-|   |   |   |   |-- task.js
-|   |   |   |   |-- ...
-|   |   |-- interfaces/
-|   |   |   |-- taskDetails.interface.js
-|   |   |   |-- ...
-|   |   |-- router/
-|   |   |   |-- taskDetails.routes.js
-|   |   |   |-- ...
-|   |   |-- TaskDetails.vue
+|   |   |-- Reminders.vue
 |-- tests/                                  // Pruebas automatizadas del proyecto
 |   |-- unit/                               // Pruebas unitarias organizadas por componentes y funcionalidades
 |   |   |-- components/
@@ -135,7 +115,7 @@ src/                                        // Directorio principal del código 
 |   |   |   |-- templates/
 |   |   |   |   |-- DefaultLayout.spec.js
 |   |   |   |   |-- ...
-|   |   |-- commons/
+|   |   |-- shared/
 |   |   |   |-- api/
 |   |   |   |   |-- taskService.spec.js
 |   |   |   |-- helpers/
