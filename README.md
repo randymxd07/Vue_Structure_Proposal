@@ -75,7 +75,7 @@ src/                                        // Directorio principal del código 
 |   |   |   |-- taskManager.interface.js
 |   |   |   |-- ...
 |   |   |-- router/
-|   |   |   |-- taskManager.routes.js
+|   |   |   |-- index.js
 |   |   |   |-- ...
 |   |   |-- TaskManager.vue
 |   |-- Reminders/                          // Módulo de recordatorios
@@ -94,7 +94,7 @@ src/                                        // Directorio principal del código 
 |   |   |   |-- reminder.interface.js
 |   |   |   |-- ...
 |   |   |-- router/
-|   |   |   |-- reminders.routes.js
+|   |   |   |-- index.js
 |   |   |   |-- ...
 |   |   |-- Reminders.vue
 |-- tests/                                  // Pruebas automatizadas del proyecto
