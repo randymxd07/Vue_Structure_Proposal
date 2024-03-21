@@ -21,7 +21,7 @@ src/                                        // Directorio principal del código 
 |   |   |-- TaskManager.vue
 |   |   |-- UserProfile.vue
 |   |   |-- ...
-|   |-- widgets/                          // Componentes que encapsulan unidades más grandes de la interfaz
+|   |-- widgets/                            // Componentes que encapsulan unidades más grandes de la interfaz
 |   |   |-- ...
 |   |-- templates/                          // Plantillas que definen la estructura básica de una página
 |   |   |-- DefaultLayout.vue
